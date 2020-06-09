@@ -1,0 +1,91 @@
+<!-- 搜索容器 -->
+<view class="search_wrap">
+ <!-- 搜索文本框 -->
+ <view class="search_style">
+   <image src="../../icons/搜索.png" style="width:25rpx;height:25rpx;padding:15rpx;"></image>
+   <input placeholder="搜索单品" name="search" class="input_style" bindtap="inputjump"></input>
+ </view>
+ <!-- 分类按钮 -->
+ <view class="divide">
+  <image src="../../icons/分类.png" style="width:40rpx;height:40rpx"></image>分类
+ </view>
+</view>
+<!-- 导航栏容器 -->
+<view class="nav">
+ <!-- 导航栏 -->
+ <view class="nav_1">
+ <scroll-view scroll-x class="padding:10rpx;"><view  wx:for="{{list}}" wx:key="index" data-index="{{index}}" class="scroll {{currentindex==index?'red':''}}" bindtap="indexchange">{{item}}</view></scroll-view>
+ 
+
+ <swiper class="swi_wrap" current="{{tab_index}}">
+   <swiper-item >
+   <scroll-view scroll-y style="height:100%">
+   <view class="info_wrap">
+ <!-- 鞋子 -->
+ <view class="info_wrap2" wx:for="{{list2}}" wx:key="index">
+  <!-- 图片容器 -->
+  <view class="info_img">
+   <!-- 图片 -->
+   <view class="img5">
+     <image class="" src="{{item.imgsrc}}" style="width:230rpx;" mode="widthFix"></image>
+   </view>
+    <!-- 图片说明 -->
+    <view class="img_int">
+      <text class="">{{item.imginfo}}</text>
+   </view>
+
+  </view>
+ <!-- 下方价格容器 -->
+ <view class="price_wrap">
+  <view class="price_style">
+   <text>${{item.imgprice}}</text>
+  </view>
+  <view class="price_style">
+   <text>{{item.buytimes}}</text>
+  </view>
+  
+ </view>
+<view class="try"></view>
+ </view>
+</view>
+</scroll-view>
+   </swiper-item>
+   <swiper-item>
+   <scroll-view scroll-y>
+   <!-- 鞋子详情 -->
+<view class="info_wrap">
+ <!-- 鞋子 -->
+ <view class="info_wrap2" wx:for="{{list3}}" wx:key="index">
+  <!-- 图片容器 -->
+  <view class="info_img">
+   <!-- 图片 -->
+   <view class="img5">
+     <image class="" src="{{item.imgsrc}}" style="width:230rpx;" mode="widthFix"></image>
+   </view>
+    <!-- 图片说明 -->
+    <view class="img_int">
+      <text class="">{{item.imginfo}}</text>
+   </view>
+
+  </view>
+ <!-- 下方价格容器 -->
+ <view class="price_wrap">
+  <view class="price_style">
+   <text>${{item.imgprice}}</text>
+  </view>
+  <view class="price_style">
+   <text>{{item.buytimes}}</text>
+  </view>
+  
+ </view>
+<view class="try"></view>
+ </view>
+</view>
+</scroll-view>
+   </swiper-item>
+  </swiper>
+
+</view>
+</view>
+
+

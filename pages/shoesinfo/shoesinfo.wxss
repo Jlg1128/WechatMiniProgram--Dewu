@@ -1,0 +1,124 @@
+.main{
+  width: 100%
+}
+.swi{
+  display: flex;
+  justify-content: center;  width: 100%
+}
+.imgpos{display: flex;
+justify-content: center
+
+}
+.shoesinfo{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ padding: 15rpx;
+ text-align: center
+}
+.shoes_info{
+padding: 10rpx;
+font-size: 25rpx;
+
+}
+.shoes_prive{
+padding: 10rpx;
+font-size: 60rpx;
+}
+.commodity_screen {
+width: 100%;
+height: 100%;
+background-color: black;
+opacity: 0.2;
+position: fixed;
+left: 0;
+bottom: 0;
+z-index: 100;
+overflow: hidden
+}
+/*对话框 */
+.commodity_attr_box {
+width: 100%;
+height: 1000rpx;
+position: fixed;
+left: 0;
+bottom: 0;
+background-color: white;
+z-index: 1000;
+overflow: hidden;
+}
+.bottom_nav{
+  display: flex;
+  position: fixed;
+  bottom: 0rpx;
+  right: 0rpx;
+  width: 100%;
+  height: 100rpx;
+  flex-wrap: nowrap;
+  
+}
+.choosesize{
+  display: flex;
+  justify-content: space-between;
+  padding: 15rpx;
+
+}
+.top_style{
+  width: 100%;
+  height: 110rpx;
+  display: flex;
+}
+.img2{
+  width: 80rpx;
+  height: 80rpx;
+  padding: 20rpx;
+  border: 2px,solid,black;
+}
+.img_info{
+  display: flex;
+  flex-direction: column;
+  padding: 15rpx;
+  align-items: center;
+  size: 20rpx;
+}
+.center_style{
+display: flex;
+flex-direction: column;
+padding: 10rpx;
+
+}
+.si_wrap{
+  display:flex;
+
+  white-space: normal;
+  padding: 10rpx;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.si{
+  flex-wrap: wrap;
+  display: flex;
+  width:40%;
+  justify-content: center;
+  padding: 10rpx;
+  font-size: 35rpx;
+  background-color: lightblue;
+  text-align: center;
+  margin-right: 13rpx;
+  margin-bottom: 13rpx;
+}
+.active{
+  border: 0.1px black solid;
+}
+
+.img_inside{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  
+}
+.img_info{
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}

@@ -1,0 +1,173 @@
+<!-- 搜索容器 -->
+<view class="search_wrap">
+ <!-- 搜索文本框 -->
+ <view class="search_style">
+   <image src="../../icons/搜索.png" style="width:25rpx;height:25rpx;padding:15rpx;"></image>
+   <input placeholder="搜索单品" name="search" class="input_style" bindtap="inputjump"></input>
+ </view>
+ <!-- 分类按钮 -->
+ <view class="divide">
+  <image src="../../icons/分类.png" style="width:40rpx;height:40rpx"></image>分类
+ </view>
+</view>
+<!-- 导航栏容器 -->
+<view class="nav">
+ <!-- 导航栏 -->
+ <view class="nav_1">
+ <scroll-view scroll-x class="padding:10rpx;"><view  wx:for="{{list}}" wx:key="index" data-index="{{index}}" class="scroll {{currentindex==index?'red':''}}" bindtap="indexchange">{{item}}</view></scroll-view>
+
+
+ <swiper class="swi_wrap" current="{{tab_index}}">
+   <swiper-item >
+    <scroll-view scroll-y style="height:100%">
+   <view class="info_wrap">
+ <!-- 鞋子 -->
+ <view class="info_wrap2" wx:for="{{list2}}" wx:key="index">
+  <!-- 图片容器 -->
+  <view class="info_img">
+   <!-- 图片 -->
+   <view class="img5">
+     <image class="" src="{{item.imgsrc}}" style="width:230rpx;" mode="widthFix"></image>
+   </view>
+    <!-- 图片说明 -->
+    <view class="img_int">
+      <text class="">{{item.imginfo}}</text>
+   </view>
+
+  </view>
+ <!-- 下方价格容器 -->
+ <view class="price_wrap">
+  <view class="price_style">
+   <text>${{item.imgprice}}</text>
+  </view>
+  <view class="price_style">
+   <text>{{item.buytimes}}</text>
+  </view>
+  
+ </view>
+<view style="height:1rpx;background-color:lightgray;width:100%"></view>
+<view class="try"></view>
+ </view>
+</view>
+</scroll-view>
+   </swiper-item>
+   <swiper-item>
+   <!-- 鞋子详情 -->
+<view class="info_wrap">
+ <!-- 鞋子 -->
+ <view class="info_wrap2" wx:for="{{list3}}" wx:key="index">
+  <!-- 图片容器 -->
+  <view class="info_img">
+   <!-- 图片 -->
+   <view class="img5">
+     <image class="" src="{{item.imgsrc}}" style="width:230rpx;" mode="widthFix"></image>
+   </view>
+    <!-- 图片说明 -->
+    <view class="img_int">
+      <text class="">{{item.imginfo}}</text>
+   </view>
+
+  </view>
+ <!-- 下方价格容器 -->
+ <view class="price_wrap">
+  <view class="price_style">
+   <text>${{item.imgprice}}</text>
+  </view>
+  <view class="price_style">
+   <text>{{item.buytimes}}</text>
+  </view>
+  
+ </view>
+<view style="height:1rpx;background-color:lightgray;width:100%"></view>
+<view class="try"></view>
+ </view>
+</view>
+   </swiper-item>
+  </swiper>
+
+</view>
+</view>
+
+<!-- 中心图片 -->
+<view class="img_center">
+ <image src="https://du.hupucdn.com/FkxJuhPYYgKpD47ezne9Bu5I2chU?imageView2/0/format/webp" style="width:100%;height:350rpx;margin:0 15rpx" mode="widthFiX"></image>
+</view>
+<!-- 图片下方模块 -->
+<view class="text_info">
+ <view class="img1">
+  <!-- 图片 -->
+  <image src="../../icons/勾.png" class="img2"></image>
+  <!-- 文字 -->
+  <text>正品保障</text>
+ </view>
+ <view class="img1">
+  <!-- 图片 -->
+  <image src="../../icons/库存查询开.png" class="img2"></image>
+  <!-- 文字 -->
+  <text>逐件查验</text>
+ </view>
+ <view class="img1">
+  <!-- 图片 -->
+  <image src="../../icons/印章.png" class="img2"></image>
+  <!-- 文字 -->
+  <text>多重鉴别</text>
+ </view>
+</view>
+<!-- 图片展示容器 -->
+<view class="img_wrap">
+ <!-- 单个图片容器 -->
+ <view class="img_info" wx:for="{{shoes}}" wx:key="index">
+  <!-- 图片 -->
+  <view class="img_wrap img">
+   <image src="{{item.imgpath}}" style="width:80rpx;height:80rpx;" mode="widthFix"></image>
+  </view>
+  <!-- 文字 -->
+  <view class="img_wrap text">
+   <text class="text_style">{{item.imgname}}</text>
+  </view>
+ </view>
+</view>
+<view style="height:1rpx;background-color:lightgray;margin:10px 0;"></view>
+<!-- 最新发售 -->
+<view class="newest_wrap">
+ <!-- 左侧文本 -->
+   <view class="left_text">
+     <text class="t1" style="padding:20rpx;">最新发售</text>
+     <text class="t2" style="font-size:30rpx;">AIR JORDAN 1 RETRO HIGH OG FIRST CLASS FLIGHT 条形码</text>
+   </view>
+ <!-- 右侧图片 -->
+  <view class="img_right">
+   <image src="https://du.hupucdn.com/FsOHvASKUzdxgCkdJ9MlLil7zZRv?imageView2/0/format/webp" style="width:150rpx;" mode="widthFix"></image>
+  </view>
+</view>
+<view style="height:20rpx;background-color:lightgray;margin:10px 0;"></view>
+<!-- 鞋子详情 -->
+<view class="info_wrap">
+ <!-- 鞋子 -->
+ <view class="info_wrap2" wx:for="{{list2}}" wx:key="index">
+  <!-- 图片容器 -->
+  <view class="info_img">
+   <!-- 图片 -->
+   <view class="img5">
+     <image class="" src="{{item.imgsrc}}" bindtap="jumptoinfo" style="width:230rpx;" mode="widthFix"  data-imgsrc="{{item.imgsrc}}" data-imginfo="{{item.imginfo}}" data-imgprice="{{item.imgprice}}" data-buytimes="{{item.buytimes}}"></image>
+   </view>
+    <!-- 图片说明 -->
+    <view class="img_int">
+      <text class="">{{item.imginfo}}</text>
+   </view>
+
+  </view>
+ <!-- 下方价格容器 -->
+ <view class="price_wrap">
+  <view class="price_style">
+   <text>${{item.imgprice}}</text>
+  </view>
+  <view class="price_style">
+   <text>{{item.buytimes}}</text>
+  </view>
+  
+ </view>
+<view style="height:1rpx;background-color:lightgray;width:100%"></view>
+<view class="try"></view>
+ </view>
+</view>

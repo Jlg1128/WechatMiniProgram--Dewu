@@ -1,0 +1,42 @@
+.userinfo {
+  display: flex;
+margin-left: 20rpx;
+padding: 10rpx;
+  align-items: center;
+  width: 30%
+}
+.userinfo-avatar {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.purchase{
+  padding: 10rpx;
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 30rpx;
+}
+.order{
+  padding: 10rpx;
+  align-items: center;
+  display: flex;
+  
+}
+.sale{
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around
+}
+.sale_items{
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx;
+  align-items: center
+}
